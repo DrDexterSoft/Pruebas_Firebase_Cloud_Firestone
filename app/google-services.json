@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "850710804683",
+    "firebase_url": "https://pruebas-f5ee9.firebaseio.com",
+    "project_id": "pruebas-f5ee9",
+    "storage_bucket": "pruebas-f5ee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850710804683:android:bc3a27be72562a5aa7434e",
+        "android_client_info": {
+          "package_name": "com.drdextersoft.app.pruebasfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850710804683-aarrho6v38p8ahpc0sorim4gc9rh0tug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSOim8DhsZBbeS8L84xjJUUULy5d0UElo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850710804683-aarrho6v38p8ahpc0sorim4gc9rh0tug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850710804683:android:1d26f44552640d0ea7434e",
+        "android_client_info": {
+          "package_name": "com.drdextersoft.app.pruebasfirebasecloudfirestone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850710804683-aarrho6v38p8ahpc0sorim4gc9rh0tug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSOim8DhsZBbeS8L84xjJUUULy5d0UElo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850710804683-aarrho6v38p8ahpc0sorim4gc9rh0tug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

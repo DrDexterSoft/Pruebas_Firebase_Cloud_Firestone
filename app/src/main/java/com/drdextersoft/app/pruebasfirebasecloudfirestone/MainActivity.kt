@@ -2,9 +2,11 @@ package com.drdextersoft.app.pruebasfirebasecloudfirestone
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 var db = FirebaseFirestore.getInstance()
@@ -13,32 +15,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // Create a new user with a first and last name
 
-        // Create a new user with a first and last name
-        val user: MutableMap<String, Any> = HashMap()
-        user["first"] = "Ada"
-        user["last"] = "Lovelace"
-        user["born"] = 1815
+        boton.setOnClickListener{
+            val textos: MutableMap<String, Any> = HashMap()
+            textos["texto1"] = edit1.text.toString()
+            textos["texto2"] = edit2.text.toString()
+            db.collection("Pruebas1")
+                .add(textos)
+        }
 
-// Add a new document with a generated ID
-        db.collection("users")
-                .add(user)
-                .addOnSuccessListener { documentReference -> Log.d("", "DocumentSnapshot added with ID: " + documentReference.id) }
-                .addOnFailureListener { e -> Log.w("", "Error adding document", e) }
-
-
-        db.collection("users")
-                .get()
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        for (document in task.result!!) {
-                            Log.d("", document.id + " => " + document.data)
-                        }
-                    } else {
-                        Log.w("", "Error getting documents.", task.exception)
-                    }
+        db.collection("Pruebas1")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    texto1.text=""+texto1.text+document.data.get("texto1").toString()+"\n"
+                    texto2.text=""+texto2.text+document.data.get("texto2").toString()+"\n"
                 }
+            }
     }
 
 }

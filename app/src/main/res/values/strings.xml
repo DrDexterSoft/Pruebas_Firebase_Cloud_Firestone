@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pruebas Firebase Cloud Firestone</string>
+    <string name="boton">Agregar</string>
 </resources>
